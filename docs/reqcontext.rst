@@ -37,7 +37,7 @@ us a :class:`~flask.ctx.RequestContext`:
 
 >>> ctx = app.test_request_context('/?next=http://example.com/')
 
-This context can be used in two ways.  Either with the `with` statement
+This context can be used in two ways.  Either with the ``with`` statement
 or by calling the :meth:`~flask.ctx.RequestContext.push` and
 :meth:`~flask.ctx.RequestContext.pop` methods:
 
@@ -75,8 +75,8 @@ find a piece of code that looks very much like this::
 
 The method :meth:`~Flask.request_context` returns a new
 :class:`~flask.ctx.RequestContext` object and uses it in combination with
-the `with` statement to bind the context.  Everything that is called from
-the same thread from this point onwards until the end of the `with`
+the ``with`` statement to bind the context.  Everything that is called from
+the same thread from this point onwards until the end of the ``with``
 statement will have access to the request globals (:data:`flask.request`
 and others).
 
@@ -137,7 +137,7 @@ Teardown Callbacks
 ------------------
 
 The teardown callbacks are special callbacks in that they are executed at
-at different point.  Strictly speaking they are independent of the actual
+a different point.  Strictly speaking they are independent of the actual
 request handling as they are bound to the lifecycle of the
 :class:`~flask.ctx.RequestContext` object.  When the request context is
 popped, the :meth:`~flask.Flask.teardown_request` functions are called.
